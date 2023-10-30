@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import Thanks from "../../components/Thanks.astro";
+---
+
+<BaseLayout>
+  <Thanks />
+  <div class="feedback-message">
+    <p>Feedback Sent Succesfully</p>
+    <h2>Thank you for your feedback!</h2>
+  </div>
+</BaseLayout>
+
+<style lang="css">
+.feedback-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-xs);
+  align-items: center;
+  height: 30vh;
+}
+
+p {
+  padding: var(--space-sm) var(--space-md);
+  line-height: var(--lh-xs);
+  border-radius: 20px;
+  color: var(--clr-white);
+  background-color: var(--clr-dark-blue-500);
+  widows: fit-content;;
+}
+
+h2 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-dark-blue-500);
+  line-height: var(--lg-xs);
+}
+</style>

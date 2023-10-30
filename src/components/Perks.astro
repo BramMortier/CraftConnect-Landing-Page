@@ -1,0 +1,132 @@
+---
+
+---
+
+<section class="perks">
+  <div class="perks__col-left">
+    <img src="/images/laptop-preview.png" alt="laptop preview">
+  </div>
+  <div class="perks__col-right">
+    <div class="perks__perk-list">
+      <div class="perks__perk-list-item">
+        <h3>Fast and simple</h3>
+        <p>
+          Find other professionals in <span class="perks__text-bold">less than 5 clicks</span> and contact them
+          directly.
+        </p>
+      </div>
+      <div class="perks__perk-list-item">
+        <h3>Ready to use</h3>
+        <p>
+          Fill your profile and use the platform <span class="perks__text-bold">right away!</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="css">
+.perks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 12.5rem;
+  overflow: hidden;
+}
+
+.perks__col-right {
+  display: flex;
+  align-items: center;
+}
+
+.perks__col-left > img {
+  max-height: 800px;
+  object-fit: contain;
+  width: initial;
+}
+
+.perks__perk-list {
+  position: relative;
+  background-color: var(--clr-dark-blue-500);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0 var(--space-lg) var(--space-lg);
+  width: 100%;
+}
+
+.perks__perk-list::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: -50vw;
+  width: 100vw;
+  background-color: var(--clr-dark-blue-500);
+  z-index: -1;
+}
+
+.perks__perk-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  max-width: 31.25rem;
+}
+
+.perks__perk-list-item > h3 {
+  text-transform: uppercase;
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-sm);
+}
+
+.perks__text-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+@media screen and (max-width: 1440px) {
+  .perks__perk-list {
+    padding: var(--space-md) 0 var(--space-md) var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .perks__col-left > img {
+    max-height: 37.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .perks {
+    grid-template-columns: 1fr;
+  }
+
+  .perks__perk-list {
+    padding: var(--space-lg);
+    align-items: center;
+    text-align: center;
+  }
+
+  .perks__col-left {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .perks {
+    margin-bottom: 6.25rem;
+  }
+
+  .perks__perk-list {
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .perks__perk-list-item h3 {
+    font-size: var(--fs-md);
+  }
+
+  .perks__perk-list-item p {
+    font-size: var(--fs-sm);
+  }
+}
+</style>

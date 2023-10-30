@@ -1,0 +1,138 @@
+---
+
+---
+
+<section class="features">
+  <div class="features__col-left">
+    <div class="features__feature-list">
+      <div class="features__feature-list-item">
+        <h3>Set your filters</h3>
+        <p>
+          Customise your own profile and set your filtering preferences so that you find <span
+            class="features__text-bold">professionals only within your field.</span>
+        </p>
+      </div>
+      <div class="features__feature-list-item">
+        <h3>Reliable 24/7</h3>
+        <p>
+          Our customer support is available for you whenever you need. It’s <span class="features__text-bold">your
+            convenience</span> that matters the most.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="features__col-right">
+    <img src="/images/mobile-preview.png" alt="mobile preview">
+  </div>
+</section>
+
+<style lang="css">
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 12.5rem;
+  overflow: hidden;
+}
+
+.features__col-left {
+  display: flex;
+  align-items: center;
+}
+
+.features__col-right {
+  display: flex;
+  justify-content: center;
+}
+
+.features__col-right > img {
+  max-height: 800px;
+  object-fit: contain;
+  width: initial;
+}
+
+.features__feature-list {
+  position: relative;
+  background-color: var(--clr-bordeaux-500);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0 var(--space-lg) var(--space-lg);
+  width: 100%;
+}
+
+.features__feature-list::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background-color: var(--clr-bordeaux-500);
+  z-index: -1;
+}
+
+.features__feature-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  max-width: 31.25rem;
+}
+
+.features__feature-list-item > h3 {
+  text-transform: uppercase;
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-sm);
+}
+
+.features__text-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+@media screen and (max-width: 1440px) {
+  .features__feature-list {
+    padding: var(--space-md) 0 var(--space-md) var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .features__col-left > img {
+    max-height: 37.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .features__feature-list {
+    padding: var(--space-lg);
+    align-items: center;
+    text-align: center;
+  }
+
+  .features__col-right {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .features {
+    margin-bottom: 6.25rem;
+  }
+
+  .features__feature-list {
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .features__feature-list-item h3 {
+    font-size: var(--fs-md);
+  }
+
+  .features__feature-list-item p {
+    font-size: var(--fs-sm);
+  }
+}
+</style>

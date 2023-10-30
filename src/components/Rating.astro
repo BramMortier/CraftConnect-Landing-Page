@@ -1,0 +1,90 @@
+---
+---
+
+<section class="rating">
+  <ul class="rating__options">
+    <li class="rating__option">
+      <a href="/thanks/1-star">
+        <img class="rating__option-star" src="/icons/star-solid.svg" alt="star icon for rating">
+      </a>
+      <p>Not interested</p>
+    </li>
+    <li class="rating__option">
+      <a href="/thanks/2-stars">
+        <img class="rating__option-star" src="/icons/star-solid.svg" alt="star icon for rating">
+      </a>
+      <p>Mildly interested</p>
+    </li>
+    <li class="rating__option">
+      <a href="/thanks/3-stars">
+        <img class="rating__option-star" src="/icons/star-solid.svg" alt="star icon for rating">
+      </a>
+      <p>Interesting idea</p>
+    </li>
+    <li class="rating__option">
+      <a href="/thanks/4-stars">
+        <img class="rating__option-star" src="/icons/star-solid.svg" alt="star icon for rating">
+      </a>
+      <p>Good idea</p>
+    </li>
+    <li class="rating__option">
+      <a href="/thanks/5-stars">
+        <img class="rating__option-star" src="/icons/star-solid.svg" alt="star icon for rating">
+      </a>
+      <p>Amazing idea</p>
+    </li>
+  </ul>
+</section>
+
+<script>
+const stars = document.querySelectorAll(".rating__option-star");
+
+stars.forEach((star, index) => {
+  star.addEventListener("mouseenter", () => {
+    for (let i = 0; i <= index; i++) {
+      stars[i].classList.add("rating__option-star--active");
+    }
+  });
+
+  star.addEventListener("mouseleave", () => {
+    for (let i = 0; i < stars.length; i++) {
+      stars[i].classList.remove("rating__option-star--active");
+    }
+  });
+});
+</script>
+
+
+<style lang="css">
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.rating__options {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-md);
+  width: fit-content;
+}
+
+.rating__option {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  align-items: center;
+  color: var(--clr-dark-blue-500);
+}
+
+.rating__option-star {
+  filter: invert(100%) sepia(46%) saturate(32%) hue-rotate(4deg) brightness(112%) contrast(88%);
+  width: 6rem;
+  aspect-ratio: 1 / 1;
+}
+
+.rating__option-star--active {
+  filter: invert(81%) sepia(98%) saturate(308%) hue-rotate(3deg) brightness(103%) contrast(91%);
+}
+</style>

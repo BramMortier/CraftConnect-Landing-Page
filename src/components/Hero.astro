@@ -1,0 +1,65 @@
+---
+
+---
+
+<section class="hero">
+  <img src="/images/logo.png" alt="craftconnect logo">
+  <div class="hero__text">
+    <h1>
+      Get instant connections with the best professionals with the <span class="hero__text-highlighted">nº1
+        craftsman community</span>
+      in Denmark
+    </h1>
+    <p>Only competent craftsmen in their craft </p>
+  </div>
+  <a href="#signup-section" class="btn">I want to connect</a>
+</section>
+
+<style lang="css">
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-sm);
+  gap: var(--space-lg);
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    var(--clr-black),
+    var(--clr-dark-blue-500)
+  );
+}
+
+.hero > img {
+  max-width: 35rem;
+}
+
+.hero__text {
+  display: flex;
+  max-width: 62.5rem;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.hero__text > h1 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semi-bold);
+}
+
+.hero__text > p {
+  font-size: var(--fs-sm);
+}
+
+.hero__text-highlighted {
+  color: var(--clr-yellow-500);
+}
+
+@media screen and (max-width: 768px) {
+  .hero__text > h1 {
+    font-size: var(--fs-md);
+  }
+}
+</style>

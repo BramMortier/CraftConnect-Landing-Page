@@ -1,0 +1,41 @@
+---
+
+---
+
+<section class="problem">
+  <h2>
+    In a rush? We got you covered with a <span class="problem__text-highlighted">seamless mobile experience.</span>
+  </h2>
+</section>
+
+<style lang="css">
+.problem {
+  display: flex;
+  justify-content: center;
+  padding-inline: var(--space-sm);
+  margin-bottom: 12.5rem;
+}
+
+.problem > h2 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-black);
+  line-height: var(--lh-sm);
+  text-align: center;
+  max-width: 62.5rem;
+}
+
+.problem__text-highlighted {
+  color: var(--clr-bordeaux-500);
+}
+
+@media screen and (max-width: 768px) {
+  .problem {
+    margin-bottom: 6.25rem;
+  }
+
+  .problem > h2 {
+    font-size: var(--fs-md);
+  }
+}
+</style>

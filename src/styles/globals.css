@@ -1,0 +1,33 @@
+:root {
+  --font: "Montserrat", sans-serif;
+
+  --fs-sm: 1.25rem;
+  --fs-md: 1.5rem;
+  --fs-lg: 2.25rem;
+  --fs-xl: 3rem;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+
+  --lh-xs: 1;
+  --lh-sm: 1.4;
+  --lh-md: 1.6;
+
+  --clr-yellow-500: #f1f459;
+  --clr-dark-blue-500: #1b3459;
+  --clr-bordeaux-500: #821410;
+
+  --clr-white: #ffffff;
+  --clr-gray-300: #f0f0f0;
+  --clr-black: #0f151e;
+
+  --space-3xs: 0.5rem;
+  --space-2xs: 0.75rem;
+  --space-xs: 1rem;
+  --space-sm: 1.5rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 10rem;
+}

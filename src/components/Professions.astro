@@ -1,0 +1,100 @@
+---
+import ProfessionsRowItem from "./ProfessionsRowItem.astro";
+---
+
+<section class="professions">
+  <div class="professions__row">
+    <ProfessionsRowItem profession="carpenters"/>
+    <ProfessionsRowItem profession="tilers"/>
+    <ProfessionsRowItem profession="technicians"/>
+    <ProfessionsRowItem profession="electricians"/>
+    <ProfessionsRowItem profession="drywallers"/>
+    <ProfessionsRowItem profession="craftsman"/>
+    <ProfessionsRowItem profession="carpenters"/>
+    <ProfessionsRowItem profession="tilers"/>
+    <ProfessionsRowItem profession="technicians"/>
+    <ProfessionsRowItem profession="electricians"/>
+    <ProfessionsRowItem profession="drywallers"/>
+    <ProfessionsRowItem profession="craftsman"/>
+  </div>
+  <div class="professions__row">
+    <ProfessionsRowItem profession="roofers"/>
+    <ProfessionsRowItem profession="plumber"/>
+    <ProfessionsRowItem profession="plasterers"/>
+    <ProfessionsRowItem profession="painters"/>
+    <ProfessionsRowItem profession="masons"/>
+    <ProfessionsRowItem profession="glaziers"/>
+    <ProfessionsRowItem profession="roofers"/>
+    <ProfessionsRowItem profession="plumber"/>
+    <ProfessionsRowItem profession="plasterers"/>
+    <ProfessionsRowItem profession="painters"/>
+    <ProfessionsRowItem profession="masons"/>
+    <ProfessionsRowItem profession="glaziers"/>
+  </div>
+</section>
+
+<script>
+import gsap from "gsap"
+import ScrollTrigger from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".professions__row:nth-child(1)", {
+  x: -500,
+  scrollTrigger: {
+    scrub: 1,
+    trigger: ".professions",
+    start: "top bottom",
+    end: "bottom top",
+  }
+})
+
+gsap.to(".professions__row:nth-child(2)", {
+  x: 500,
+  scrollTrigger: {
+    scrub: 1,
+    trigger: ".professions",
+    start: "top bottom",
+    end: "bottom top",
+  }
+})
+</script>
+
+<style lang="css">
+.professions {
+  background-color: var(--clr-yellow-500);
+  padding-block: var(--space-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: 12.5rem;
+}
+
+.professions__row {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.professions__row:nth-child(2) {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 1440px) {
+  .professions {
+    padding-block: var(--space-sm);
+    gap: var(--space-sm);
+  }
+
+  .professions__row {
+    gap: var(--space-sm);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .professions {
+    margin-bottom: 0;
+  }
+}
+</style>

@@ -1,0 +1,49 @@
+---
+const props = Astro.props
+---
+
+<div class="professions__row-item">
+  <img src={`/images/professions/${props.profession}.png`} alt={`image of ${props.profession} profession`}>
+  <span>{props.profession}</span>
+</div>
+
+<style lang="css">
+.professions__row-item {
+  position: relative;
+  min-width: calc(100vw / 5);
+}
+
+.professions__row-item img {
+  object-fit: cover;
+}
+
+.professions__row-item span {
+  position: absolute;
+  top: var(--space-xs);
+  left: var(--space-xs);
+  font-weight: var(--fw-semi-bold);
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  .professions__row-item {
+    min-width: calc(100vw / 3);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .professions__row-item {
+    min-width: calc(100vw / 2);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .professions__row-item {
+    min-width: calc(100vw / 1.5);
+  }
+
+  .professions__row-item span {
+    font-size: var(--fs-sm);
+  }
+}
+</style>

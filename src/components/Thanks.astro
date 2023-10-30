@@ -1,0 +1,90 @@
+---
+
+---
+
+<section class="thanks">
+  <img src="/images/logo.png" alt="CraftConnect logo">
+  <h2>Thank you for Joining <span class="thanks__text-highlighted">CraftConnect!</span></h2>
+
+  <div class="thanks__paragraphs">
+      <p>Is this project somethings you are excited for? If so please <span class="thanks__text-bold">give us some feedback.</span></p>
+      <p>We are currently in the process of building out the project and would like to know what skilled craftsman like yourself think about our idea.</p>
+  </div>
+
+</section>
+
+<style lang="css">
+.thanks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding-block: var(--space-md);
+  background: linear-gradient(
+    180deg,
+    var(--clr-black),
+    var(--clr-dark-blue-500)
+  );  
+}
+
+.thanks > img {
+  margin-bottom: var(--space-lg);
+  max-width: 35rem;
+}
+
+.thanks > h2 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semi-bold);
+  margin-bottom: var(--space-sm);
+}
+
+.thanks__text-highlighted {
+  color: var(--clr-yellow-500);
+}
+
+.thanks__text-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+.thanks__paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  text-align: center;
+  padding-inline: var(--space-sm);
+  max-width: 50rem;
+  font-size: var(--fs-md);
+}
+
+.thanks__paragraphs > p {
+  display: flex;
+  flex-direction: column;
+  line-height: var(--lh-md);
+
+}
+
+@media screen and (max-width:768px) {
+  .thanks__paragraphs {
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    max-width: 600px;
+    font-size: var(--fs-md);
+  }
+}
+
+@media screen and (max-width:425px) {
+  .thanks > h2 {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semi-bold);
+  }
+
+  .thanks__paragraphs {
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    max-width: 21rem;
+    font-size: var(--fs-sm);
+  }
+}
+</style>
+
